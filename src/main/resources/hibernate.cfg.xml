@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+                                         "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+ <session-factory name="">
+  <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+  <property name="hibernate.connection.password">t9aaz238</property>
+  <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/sakila</property>
+  <property name="hibernate.connection.username">root</property>
+  <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+  <property name="hibernate.show_sql">true</property>
+  <property name="hibernate.use_sql_comments">true</property>
+  <property name="hibernate.format_sql">true</property>
+  <mapping class="in.hrsoftwares.hibernate.Actor" resource="in/hrsoftwares/hibernate/Actor.hbm.xml"/>
+  <mapping class="in.hrsoftwares.hibernate.FilmActor" resource="in/hrsoftwares/hibernate/FilmActor.hbm.xml"/>
+  <mapping class="in.hrsoftwares.hibernate.Film" resource="in/hrsoftwares/hibernate/Film.hbm.xml"/>
+  <mapping class="in.hrsoftwares.hibernate.Inventory" resource="in/hrsoftwares/hibernate/Inventory.hbm.xml"/>
+  <mapping class="in.hrsoftwares.hibernate.FilmCategory" resource="in/hrsoftwares/hibernate/FilmCategory.hbm.xml"/>
+  <mapping class="in.hrsoftwares.hibernate.Rental" resource="in/hrsoftwares/hibernate/Rental.hbm.xml"/>
+  <mapping class="in.hrsoftwares.hibernate.Payment" resource="in/hrsoftwares/hibernate/Payment.hbm.xml"/>
+  <mapping class="in.hrsoftwares.hibernate.Language" resource="in/hrsoftwares/hibernate/Language.hbm.xml"/>
+  <mapping class="in.hrsoftwares.hibernate.Category" resource="in/hrsoftwares/hibernate/Category.hbm.xml"/>
+  <mapping class="in.hrsoftwares.hibernate.Store" resource="in/hrsoftwares/hibernate/Store.hbm.xml"/>
+  <mapping class="in.hrsoftwares.hibernate.Staff" resource="in/hrsoftwares/hibernate/Staff.hbm.xml"/>
+  <mapping class="in.hrsoftwares.hibernate.Customer" resource="in/hrsoftwares/hibernate/Customer.hbm.xml"/>
+  <mapping class="in.hrsoftwares.hibernate.Address" resource="in/hrsoftwares/hibernate/Address.hbm.xml"/>
+  <mapping class="in.hrsoftwares.hibernate.City" resource="in/hrsoftwares/hibernate/City.hbm.xml"/>
+  <mapping class="in.hrsoftwares.hibernate.Country" resource="in/hrsoftwares/hibernate/Country.hbm.xml"/>
+ </session-factory>
+</hibernate-configuration>

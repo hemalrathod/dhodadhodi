@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 27 Aug, 2016 4:54:05 PM by Hibernate Tools 5.1.0.Beta1 -->
+<hibernate-mapping>
+    <class name="in.hrsoftwares.hibernate.Inventory" table="inventory" catalog="sakila" optimistic-lock="version">
+        <id name="inventoryId" type="java.lang.Integer">
+            <column name="inventory_id" />
+            <generator class="identity" />
+        </id>
+        <many-to-one name="film" class="in.hrsoftwares.hibernate.Film" fetch="select">
+            <column name="film_id" not-null="true" />
+        </many-to-one>
+        <many-to-one name="store" class="in.hrsoftwares.hibernate.Store" fetch="select">
+            <column name="store_id" not-null="true" />
+        </many-to-one>
+        <property name="lastUpdate" type="timestamp">
+            <column name="last_update" length="19" not-null="true" />
+        </property>
+        <set name="rentals" table="rental" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="inventory_id" not-null="true" />
+            </key>
+            <one-to-many class="in.hrsoftwares.hibernate.Rental" />
+        </set>
+    </class>
+</hibernate-mapping>
